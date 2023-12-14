@@ -31,8 +31,8 @@ body {
   }
 
 .user img {
-  width: 100%;
-  height: 30px;
+  width: 60px;
+  height: 40px;
   margin-left: 10px;
   padding-right: 25px;
   padding-top: 8px;
@@ -51,7 +51,7 @@ input[type=text], input[type=password] {
 }
 
 .container2 button {
-  background-color: #add8e6;
+  background-color: #5294f8;
   color: white;
   padding: 16px;
   margin: 15px 50px;
@@ -88,4 +88,17 @@ input[type=text], input[type=password] {
 
 label {
 	width: 100%;
+}
+
+#themeToggle {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: rgb(17, 18, 26);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#themeToggle:hover button {
+  background-color: #000000;
 }
