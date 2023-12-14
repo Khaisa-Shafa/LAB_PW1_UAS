@@ -1,24 +1,23 @@
 <?php 
 include("../Config/db.php");
 
-if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['namalayanan'], $_POST['harga'])) {
-    $namalayanan = $_POST['namalayanan'] ?? '';
-    $harga = $_POST['harga'] ?? '';
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['task'], $_POST['deadline'])) {
+    $task = $_POST['task'] ?? '';
+    $deadline = $_POST['deadline'] ?? '';
 
     if(isset($_SESSION['username'])){
         $username = $_SESSION['username'];
         
-        $insert_query = "INSERT INTO layanan (namalayanan, harga, username) VALUES (?, ?, ?)";
+        $insert_query = "INSERT INTO todo (task, deadline) VALUES (?, ?)";
         
         // Prepare and bind the statement
         if ($stmt = $conn->prepare($insert_query)) {
-            $stmt->bind_param("sss", $namalayanan, $harga, $username);
+            $stmt->bind_param("ss", $task, $deadline);
             
             if ($stmt->execute()) {
-                echo "Layanan berhasil ditambahkan!";
-                // Redirect to layanan.php after successful insertion
-                header("Location: layanan.php");
-                exit(); // Ensure that no other output is sent
+                echo "Task berhasil ditambah!";
+                header("Location: todolist.php");
+                exit();
             } else {
                 echo "Error: " . $conn->error;
             }
