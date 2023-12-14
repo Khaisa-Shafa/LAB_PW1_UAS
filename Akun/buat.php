@@ -1,10 +1,3 @@
-<!-- LIST TODO
-. buat submit berfungsi
-. how to stay login selama nggak keluar tab
-. -->
-<!-- CATATAN : checkbox kuhapus, ga ada term of condition kita :v 
-terus email juga ga ada, jadi fitur konfirmasi, lupa, reset juga 
-ga bisa... (aku hapus file lupa dan reset juga)-->
 <?php
 include("../Config/db.php");
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['newaccount'])) {
@@ -17,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['newaccount'])) {
         echo "Passwords do not match";
     } else {
          
-         $sql = "INSERT INTO akunlaundry (username, password) VALUES ('$username', '$password')";
+         $sql = "INSERT INTO akun (username, password) VALUES ('$username', '$password')";
     }
 
     if ($conn->query($sql) === TRUE) {
@@ -35,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['newaccount'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buat Akun</title>
-    <link rel="stylesheet" href="../Styling/masuk.css" />
+    <link rel="stylesheet" href="../Styling/akun.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100;1,400&display=swap" rel="stylesheet">
@@ -43,16 +36,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['newaccount'])) {
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body> 
-    <!-- navbar start -->
-    <nav class="position-fixed z-1 start-0 end-0 navbar navbar-expand-lg ">
-      <div class="container">
-            <a class="navbar-brand" href="#">LAUNDRYKUY</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-      </div>
+    <nav class="position-fixed z-1 start-0 end-0 navbar navbar-expand-lg">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">TO DO LIST</a>
+        <button id="themeToggle">Toggle Dark Mode</button>
+        </div>
+        <div class="user">
+            <a href="../Akun/masuk.php"><img src="../Styling/user.png" alt="user"></a>
+        </div>
     </nav>
-    <!-- navbar end -->
+    
     <!-- register start -->
     <form action="" method="post" class="newaccount" novalidate="">
         <div class="container2">
