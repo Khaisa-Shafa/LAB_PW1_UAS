@@ -1,5 +1,6 @@
 <?php
 include("../Config/db.php");
+session_start();
 
 // Function to handle service deletion
 if (isset($_POST['delete'])) {

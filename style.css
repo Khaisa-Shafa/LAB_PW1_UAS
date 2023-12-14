@@ -72,6 +72,16 @@
   margin: 0 .5em;
 }
 
+.carousel-control-prev, .carousel-control-next
+{
+  width : 6vh;
+  height : 6vh;
+  background-color: antiquewhite;
+  border-radius: 50%;
+  top : 50%;
+  transform : translateY(-50%);
+}
+
 .addform input[type="submit"] {
   background-color: #5294f8;
   border-radius: 10px;

@@ -1,22 +1,19 @@
 <?php
 include("../Config/db.php");
-session_start(); // Start the session
+session_start();
 
 if(isset($username)) {
-    $_SESSION['username'] = $username; // Set the username in a session variable
+    $_SESSION['username'] = $username;
 }
 ?>
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>To-Do List Mantap</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="style.css">
-=======
     <link rel="stylesheet" href="../style.css">
->>>>>>> 8f99856f3d7809f6638efc925180ae39a4e292ee
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
@@ -31,32 +28,6 @@ if(isset($username)) {
         </div>
     </nav>
 
-    <?php
-    $sql = "SELECT * FROM todo";
-    if ($stmt = $conn->prepare($sql)) {
-        $i = 0;
-        $stmt->execute();
-        $result = $stmt->get_result();
-        while ($row = $result->fetch_assoc()) {
-            $i++;         
-            echo '<div class="col-sm-6 mb-3 mb-sm-0">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title" name>'. $row["task"]. '</h5>
-                            <p class="card-text"> Deadline : '. $row["deadline"] . '</p>
-                            <form method="post" action="delete.php">
-                                <input type="hidden" name="delete_id" value="' . $row["id"] . '">
-                                <input class="donebutton" type="submit" name="delete" value="Done">
-                            </form>
-                        </div>
-                    </div>
-                </div>';
-        }
-        echo $i . " results";
-    } else
-        echo "<tr><td colspan='4'>0 results</td></tr>";
-    $stmt->close();
-    ?>
     <table class="tabel">
         <tr>
             <td colspan='4'>
@@ -69,76 +40,48 @@ if(isset($username)) {
         </tr>
         <td class="all-card">
         </td>
-    
     </table>
 
     <div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-    <div class="card" >
-        <div class="img-wrapper">
-    <img src="..."  alt="...">
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    </div>
-    </div>
+        <div class="carousel-inner">
+        <?php
+            $sql = "SELECT * FROM todo";
+            if ($stmt = $conn->prepare($sql)) {
+                $stmt->execute();
+                $result = $stmt->get_result();
+                $i = 0;
+                while ($row = $result->fetch_assoc()) {
+                    $i++;
+                    $active = $i === 1 ? 'active' : ''; // Set the first item as active
+                    ?>
+                    <div class="carousel-item <?php echo $active; ?>">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><?php echo $row["task"]; ?></h5>
+                                            <p class="card-text">Deadline: <?php echo $row["deadline"]; ?></p>
+                                            <form method="post" action="delete.php">
+                                                <input type="hidden" name="delete_id" value="<?php echo $row["id"]; ?>">
+                                                <input class="donebutton" type="submit" name="delete" value="Done">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                }
+                $stmt->close();
+            } else {
+                echo "<tr><td colspan='4'>0 results</td></tr>";
+            }
+            ?>
+        </div>
 
-    <div class="carousel-item">
-    <div class="card" >
-    <div class="img-wrapper">
-    <img src="..."  alt="...">
     </div>
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    </div>
-    </div>
-
-    <div class="carousel-item">
-    <div class="card" >
-    <div class="img-wrapper">
-    <img src="..."  alt="...">
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    </div>
-    </div>
-
-    <div class="carousel-item">
-    <div class="card">
-    <div class="img-wrapper">
-    <img src="..."  alt="...">
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    </div>
-    </div>
-
-    <div class="carousel-item">
-    <div class="card">
-    <div class="img-wrapper">
-    <img src="..."  alt="...">
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    </div>
-    </div>
- </div>
 
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -149,7 +92,7 @@ if(isset($username)) {
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-        <
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <script src = "../script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
