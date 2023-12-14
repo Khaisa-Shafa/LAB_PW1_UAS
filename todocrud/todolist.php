@@ -20,43 +20,7 @@ if(isset($username)) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            }
 
-            body {
-            font-family: 'Rokkitt', serif;
-            background-color: var(--bg);
-            color: #010101;
-            }
-
-            /* NAVBAR */
-            .navbar {
-            background-color: #add8e6;
-            margin-top: 0px;
-            }
-            .navbar-brand {
-            font-weight: 600;
-            }
-
-            .user img{
-            width: 100%;
-            height: 30px;
-            margin-left: 10px;
-            padding-right: 25px;
-            padding-top: 8px;
-            }
-
-        .user img {
-            width: 100%;
-            height: 30px;
-            margin-left: 10px;
-            padding-right: 25px;
-            padding-top: 8px;
-        }
-    </style>
     <nav class="position-fixed z-1 start-0 end-0 navbar navbar-expand-lg">
         <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">TO DO LIST</a>
@@ -93,7 +57,7 @@ if(isset($username)) {
         echo "<tr><td colspan='4'>0 results</td></tr>";
     $stmt->close();
     ?>
-    <table>
+    <table class="tabel">
         <tr>
             <td colspan='4'>
                 <form method='post' action='add.php' class='addform'>
@@ -103,7 +67,75 @@ if(isset($username)) {
                 </form>
             </td>
         </tr>
+        <td class="all-card">
+        </td>
+    
     </table>
+
+    <div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <div class="card" >
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="carousel-item">
+    <div class="card" >
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="carousel-item">
+    <div class="card" >
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="carousel-item">
+    <div class="card">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+    <div class="carousel-item">
+    <div class="card">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+        <
     <script src = "../script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
