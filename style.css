@@ -1,3 +1,132 @@
+/*Home*/
+  /* font google */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-padding-top: 2rem;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* warna font dan background */
+:root{
+    --main-color: #007e84;
+    --second-color: #04111c;
+}
+
+/* style.css */
+
+/* Gaya untuk card */
+.card {
+  background-color: #fff; /* Warna soft blue */
+  border-radius: 10px; /* Rounding sudut */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek elevasi */
+  padding: 10px; /* Padding agar konten tidak terlalu rapat dengan tepi kartu */
+  transition: transform 0.3s ease-in-out; /* Transisi saat hover */
+  
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efek sedikit mengangkat kartu saat dihover */
+}
+
+
+/* Gaya untuk judul card */
+.card-title {
+  color: #333; /* Warna teks judul */
+}
+
+/* Gaya untuk list pada card */
+.list-group-item {
+  color: #555; /* Warna teks list */
+}
+
+
+/* ukuran section */
+section{
+    padding: 20px 10%;
+}
+
+*::selection{
+    color: #fff;
+    background: var(--main-color) ;
+}
+
+img{
+    width: 100%;
+}
+#menu-icon{
+    font-size: 24 px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+
+/* posisi section home */
+.Home{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+        background-image: url('bg.png'); /* Ganti 'url_gambar_background.jpg' dengan URL atau path gambar background Anda */
+        background-size: cover;
+        background-position: center;
+        height: 100vh; /* Mengatur tinggi latar belakang agar mengisi layar penuh */
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        text-align: left;
+        color: #ffffff; /* Warna teks agar kontras dengan latar belakang */
+        padding: 150px;
+}
+
+.Home-text{
+    flex: 1 1 17rem;
+}
+
+.Home-img{
+    flex: 1 1 17rem;
+}
+.Home-img img{
+    animation: animate 3s linear infinite;
+}
+
+.Home-text span{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--second-color);
+}
+.Home-text h1{
+    font-size: 4.5rem;
+    color: var(--main-color);
+    font-weight: bolder;
+}
+.Home-text h2{
+    font-size: 1.8rem;
+    color: var(--second-color);
+    font-weight: 600;
+    margin: 0.5rem 0 1.4rem;
+    text-transform: uppercase;
+}
+.btn{
+    padding: 7px 16px;
+    border: 2px solid var(--second-color);
+    border-radius: 40px;
+    color: var(--second-color);
+    font-weight: 500;
+}
+.btn:hover{
+    color: #fff;
+    background: var(--second-color);
+}
 * {
   margin: 0;
   padding: 0;
@@ -70,6 +199,16 @@ body {
 }
 .card {
   margin: 0 0.5em;
+}
+
+.carousel-control-prev, .carousel-control-next
+{
+  width : 6vh;
+  height : 6vh;
+  background-color: antiquewhite;
+  border-radius: 50%;
+  top : 50%;
+  transform : translateY(-50%);
 }
 
 .addform input[type="submit"] {
