@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Rokkitt', serif;
+  background-color: var(--bg);
+  color: #010101;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #f0e81e;
+  margin-top: 0px;
+}
+.navbar-brand {
+  font-weight: 600;
+}
+/* button tambahkan di navbar */
+[type ="button"].btn {
+  background: #55b084;
+  color: #fff;
+  margin-left: 20px;
+  margin-right: 15px;
+  padding-top: 7px;
+}
+[type ="button"].btn:hover {
+  background-color: #f5773c;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: all .2s;
+}
+.admin img {
+  width: 100%;
+  height: 30px;
+  margin-left: 10px;
+  padding-right: 25px;
+  padding-top: 8px;
+}
+
+
+/* ISI INDEX */
+.all {
+  display: flex;
+  flex-direction: row ;
+}
+.hero {
+  padding-left: 9rem;
+  padding-top: 5rem;
+}
+.box {
+  width: 100%;
+}
+.hero h1 {
+ margin-bottom: 20px;
+}
+.hero .box1 {
+  width: 100%;
+  height: 100px;
+  background-color: #f0e81e;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 10px;
+}
+.box1 h2 {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.hero .box2 {
+  width: 100%;
+  height: 100px;
+  background-color: #f0e81e;
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 10px;
+}
+.box2 h2 {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+
+/* tombol laporan */
+.for {
+  display: flex;
+  margin-top: 90px;
+  width: 160px;
+  height: 70px;
+  background-color: #55b084;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 15px;
+  padding-top: 6px;
+  margin-left: 40px;
+}
+.for img {
+  width: 50px;
+  height: 55px;
+  margin-left: 10px;
+  margin-top: 7px;
+}
+.for:hover {
+  transition: all .3s;
+  background-color: #f0e81e;
+  cursor: pointer;
+}
+.box3 h2 {
+  color: #010101;
+  text-decoration: none;
+}
+.box3 img {
+  width: 50px;
+  height: 40px;
+}
+.hero2 img {
+  width: 40vw;
+  height: 60vh;
+  margin-top: 12rem;
+  margin-left: 55%;
+}
+
+/* form data pelanggan */
+.data {
+  padding-top: 3rem;
+  padding-left: 5rem;
+  display: flex;
+  padding-bottom: 2rem;
+}
+.inputan {
+  margin-right: 10%;
+}
+
+.form-label {
+  display: block;
+  margin-left: 20px;
+  font-weight: 600;
+  font-size: 17px;
+}
+[type = text].inputan_box, [type = number].inputan_box{
+  margin-left: 20px;
+  width: 120%;
+  border-radius: 7px;
+  height: 7vh;
+}
+[type = "text"].form-control {
+  width: 100%;
+  border: 1px solid #010101;
+}
+[type = submit1].btn.btn-primary  {
+  margin-left: 1.5rem;
+}
+
+button.tambah, button.kurang {
+ padding: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+  color: #010101;
+  border-radius: 4px;
+  margin-right: 2px;
+  margin-left: 2px;
+  width: 30px;
+}
+
+button.tambah:hover, button.kurang:hover {
+  background-color: #f0e81e;
+}
+
+
+#tabel1 {
+  border: 1px solid #010101;
+  background-color: #ebb840;
+  text-align: center;
+  margin-top: 4rem;
+  width: 63%;
+}
+#tabel1 th {
+  border: 5px solid #fff;
+  text-align: center;
+  height: 10px;
+  font-size: 17px;
+}
+#tabel1 td {
+  border: 5px solid #fff;
+  font-weight: 400;
+  font-size: 18px;
+  height: 20px;
+}
+
+/* laporan.php */
+.judul {
+  padding-top: 4rem ;
+}
+.judul h1 {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+#tabel2 {
+  border: 2px solid #010101;
+  margin-left: 60px;
+}
+#tabel2 td {
+  text-align: center;
+  border: 2px solid #010101;
+}
+#tabel2 th {
+  text-align: center;
+  background-color: #ebb840;
+  border: 2px solid #010101;
+  height: 10vh;
+}
+
+[type = "submit2"].btn.btn-outline-primary {
+  margin-top: 1.3rem;
+  margin-left: 5rem;
+}
+
+[type = "submit3"].btn.btn-warning {
+  margin-left: 20px;
+}
