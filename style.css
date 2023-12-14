@@ -134,7 +134,7 @@ img{
 
 body {
   font-family: "Rokkitt", serif;
-  background-color: var(--bg);
+  background-image: url(bg.png);
   color: #010101;
 }
 
