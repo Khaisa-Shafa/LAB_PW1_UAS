@@ -12,13 +12,53 @@ if(isset($username)) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>To-Do List Mantap</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
-    <Ganti>
-    <nav class="navbar bg-body-tertiary">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            }
+
+            body {
+            font-family: 'Rokkitt', serif;
+            background-color: var(--bg);
+            color: #010101;
+            }
+
+            /* NAVBAR */
+            .navbar {
+            background-color: #add8e6;
+            margin-top: 0px;
+            }
+            .navbar-brand {
+            font-weight: 600;
+            }
+
+            .user img{
+            width: 100%;
+            height: 30px;
+            margin-left: 10px;
+            padding-right: 25px;
+            padding-top: 8px;
+            }
+
+        .user img {
+            width: 100%;
+            height: 30px;
+            margin-left: 10px;
+            padding-right: 25px;
+            padding-top: 8px;
+        }
+    </style>
+    <nav class="position-fixed z-1 start-0 end-0 navbar navbar-expand-lg">
         <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">TO DO LIST</a>
+        </div>
+        <div class="user">
+            <a href="../Akun/masuk.php"><img src="../Styling/user.png" alt="user"></a>
         </div>
     </nav>
 
