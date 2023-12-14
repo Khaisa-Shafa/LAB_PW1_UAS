@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['login'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Masuk</title>
-    <link rel="stylesheet" href="../Styling/akun.css" />
+    <link rel="stylesheet" href="../akun.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100;1,400&display=swap" rel="stylesheet">
@@ -54,11 +54,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['login'])) {
     <!-- navbar start -->
     <nav class="position-fixed z-1 start-0 end-0 navbar navbar-expand-lg">
         <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">TO DO LIST</a>
-        <button id="themeToggle">Toggle Dark Mode</button>
-        </div>
-        <div class="user">
-            <a href="../Akun/masuk.php"><img src="../Styling/user.png" alt="user"></a>
+            <a class="navbar-brand" href="../index.html">TO DO LIST</a>
+            <button class="themeToggle">Toggle Dark Mode</button>
         </div>
     </nav>
 
@@ -85,4 +82,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['login'])) {
         </div>
     </form>
     <!-- login end -->
+    <script src="../script.js"></script>
 </body>
+</html>

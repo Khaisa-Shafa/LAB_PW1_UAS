@@ -10,24 +10,25 @@ body {
   justify-content: center;
   min-height: 100vh;
   font-family: 'Rokkitt', serif;
-  background-image: url(../bg.png)  ;
+  background-image: url(Styling/bg.png)  ;
   color: #010101;
 }
 
 .navbar {
-  background-color: #add8e6;
+  background-color: #add;
   margin-top: 0px;
-  }
-  .navbar-brand {
-  font-weight: 600;
-  }
+}
+.navbar-brand {
+  font-weight: 700;
+  margin-left: 100px;
+}
 
-  .user img{
-    width: 70px;
-    height: 43px;
-    margin-left: 10px;
-    padding-right: 25px;
-  }
+.user img {
+  width: 70px;
+  height: 43px;
+  margin-left: 10px;
+  padding-right: 25px;
+}
 
 .h2 {
   margin-top: 150px;
@@ -81,7 +82,7 @@ label {
 	width: 100%;
 }
 
-#themeToggle {
+.themeToggle {
   font-size: 16px;
   padding: 10px 20px;
   background-color: rgb(17, 18, 26);
@@ -90,6 +91,17 @@ label {
   border-radius: 5px;
   cursor: pointer;
 }
-#themeToggle:hover button {
-  background-color: #000000;
+
+.mt-4.text-center {
+  background-color: #fff;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.dark-mode{
+  background-image: url(Styling/bgdark.png);
+}
+
+.dark-mode .navbar{
+  background-color: #8a8a8a;
 }

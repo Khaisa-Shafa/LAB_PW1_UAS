@@ -134,8 +134,16 @@ img{
 
 body {
   font-family: "Rokkitt", serif;
-  background-image: url(bg.png);
+  background-image: url(Styling/bg.png);
   color: #010101;
+}
+
+.dark-mode{
+  background-image: url(Styling/bgdark.png);
+}
+
+.dark-mode .navbar{
+  background-color: #8a8a8a;
 }
 
 /* NAVBAR */
@@ -225,7 +233,7 @@ body {
   border-radius: 10px;
 }
 
-#themeToggle {
+.themeToggle {
   font-size: 16px;
   padding: 10px 20px;
   background-color: #3498db;
@@ -234,6 +242,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-#themeToggle:hover button {
-  background-color: #2980b9;
+
+.container {
+  margin-top: 30px;
 }

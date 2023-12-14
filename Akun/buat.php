@@ -1,11 +1,9 @@
 <?php
 include("../Config/db.php");
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['newaccount'])) {
-    // Retrieve form data
     $username = $_POST['name'];
     $password = $_POST['password'];
     $password2 = $_POST['password2'];
-    // Check if passwords match
     if ($password !== $password2) {
         echo "Passwords do not match";
     } else {
@@ -28,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['newaccount'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buat Akun</title>
-    <link rel="stylesheet" href="../Styling/akun.css" />
+    <link rel="stylesheet" href="../akun.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100;1,400&display=swap" rel="stylesheet">
@@ -38,14 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['newaccount'])) {
   <body> 
     <nav class="position-fixed z-1 start-0 end-0 navbar navbar-expand-lg">
         <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">TO DO LIST</a>
-        <button id="themeToggle">Toggle Dark Mode</button>
-        </div>
-        <div class="user">
-            <a href="../Akun/masuk.php"><img src="../Styling/user.png" alt="user"></a>
+            <a class="navbar-brand" href="../index.html">TO DO LIST</a>
+            <button class="themeToggle">Toggle Dark Mode</button>
         </div>
     </nav>
-    
+
     <!-- register start -->
     <form action="" method="post" class="newaccount" novalidate="">
         <div class="container2">
@@ -70,6 +65,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['newaccount'])) {
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="js/my-login.js"></script>
+    <script src="../script.js"></script>
     <!-- register end -->
 </body>
